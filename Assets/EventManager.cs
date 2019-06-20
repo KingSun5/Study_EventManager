@@ -51,7 +51,7 @@ public class EventManager:IEventMgr
     public bool IsPause = false;
 
     /// <summary>
-    /// 注册事件无参数
+    /// 注册事件
     /// </summary>
     /// <param name="key"></param>
     /// <param name="eventMgr"></param>

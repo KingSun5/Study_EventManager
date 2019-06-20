@@ -14,14 +14,12 @@ public class Test : MonoBehaviour {
 
 	void Start ()
 	{
-		EventManager.IsPause = true;
 		Test1 += Aaa;
 		EventManager.Register(1,Test1);
 		EventManager.Invoke(1,1,"abc");
 		
 		Test2 += Bbb;
 		EventManager.Register(2,Test2);
-		
 		EventManager.Invoke(2);
 	}
 	
