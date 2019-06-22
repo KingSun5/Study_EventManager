@@ -8,18 +8,12 @@ public class Test : MonoBehaviour {
 	
 	public EventManager EventManager = new EventManager();
 
-	private event EventMgr Test1;
-	private event EventMgr Test2;
-	
-
 	void Start ()
 	{
-		Test1 += Aaa;
-		EventManager.Register(1,Test1);
+		EventManager.Register(1,Aaa);
 		EventManager.Invoke(1,1,"abc");
 		
-		Test2 += Bbb;
-		EventManager.Register(2,Test2);
+		EventManager.Register(2,Bbb);
 		EventManager.Invoke(2);
 	}
 	
@@ -29,7 +23,7 @@ public class Test : MonoBehaviour {
 	}
 
 
-	public void Aaa(int key, params object[] param)
+	public void Aaa(params object[] param)
 	{
 		for (int i = 0; i < param.Length; i++)
 		{
@@ -37,7 +31,7 @@ public class Test : MonoBehaviour {
 		}
 	}
 	
-	public void Bbb(int key, params object[] param)
+	public void Bbb( params object[] param)
 	{
 		print(222);
 	}

@@ -7,7 +7,7 @@ using UnityEngine;
 /// </summary>
 /// <param name="key"></param>
 /// <param name="param"></param>
-public delegate void EventMgr(int key, params object[] param);
+public delegate void EventMgr(params object[] param);
 
 /// <summary>
 /// 成员方法接口
